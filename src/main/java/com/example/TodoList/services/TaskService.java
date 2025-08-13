@@ -13,9 +13,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+
 
 @Service
 public class TaskService {
@@ -26,6 +26,8 @@ public class TaskService {
     public ResponseEntity<TaskModel> insertTask(@RequestBody @Valid TaskRecordDTO taskRecordDTO) {
         TaskModel taskModel = new TaskModel();
         BeanUtils.copyProperties(taskRecordDTO, taskModel);
+
+        taskModel.setTime(LocalDateTime.now());
 
         TaskModel saved = taskRepository.save(taskModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
