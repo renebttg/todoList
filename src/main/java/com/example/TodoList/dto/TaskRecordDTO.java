@@ -7,5 +7,4 @@ import java.time.LocalDateTime;
 
 public record TaskRecordDTO(
         @NotBlank String title,
-        @NotNull(message = "Field 'completed' is required.") Boolean completed,
-        @NotNull LocalDateTime time) {}
+        @NotNull(message = "Field 'completed' is required.") Boolean completed) {}
