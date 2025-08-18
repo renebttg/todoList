@@ -1,59 +1,72 @@
-# TodoList
+# 🌐 To-Do List — Frontend (Angular Source Code)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+Esta branch contém **apenas o código-fonte Angular** da aplicação **To-Do List**.
 
-## Development server
+⚠️ O frontend já está integrado no backend Spring Boot (`src/main/resources/static`), então esta branch é **apenas para consulta ou desenvolvimento**.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🚀 Tecnologias Utilizadas
+
+- **Angular**
+- **TypeScript**
+- **HTML5 / CSS3**
+
+---
+
+## 📂 Estrutura do Projeto
+
 ```
+todo-list/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── features/
+│   │   │   ├── models/
+│   │   │   └── services/
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   └── index.html
+├── angular.json
+├── package.json
+└── tsconfig.json
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
 ```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ⚙️ Funcionalidades
 
-```bash
-ng generate --help
-```
+- Criar nova tarefa
+- Listar todas as tarefas
+- Marcar tarefa como concluída ou pendente
+- Editar tarefa existente
+- Excluir tarefa
 
-## Building
+---
 
-To build the project run:
+## ▶️ Como Executar (opcional)
 
-```bash
-ng build
-```
+Se você quiser executar o Angular separadamente para desenvolvimento:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+2.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    ng serve
+    ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+3.  **Acesse no navegador:**
+    [http://localhost:4200](http://localhost:4200)
 
-```bash
-ng test
-```
+> **Lembre-se:** não é necessário rodar esta branch para usar a aplicação, pois o Angular já está integrado no Spring Boot.
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🌿 Branches Relacionadas
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `main` → Backend Spring Boot + Angular buildado (produção)
+- `front-end` → Angular source code apenas (esta branch, para referência / desenvolvimento)
