@@ -1,0 +1,11 @@
+<app-todo-form (add)="onAdd($event)"></app-todo-form>
+
+<ul class="todo-list">
+  <li *ngFor="let todo of todos" [class.completed]="todo.completed">
+    <label>
+      <input type="checkbox" [checked]="todo.completed" (change)="toggleCompletion(todo)">
+      {{ todo.title }}
+    </label>
+    <button (click)="deleteTodo(todo.id!)">✕</button>
+  </li>
+</ul>

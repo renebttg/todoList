@@ -1,0 +1,35 @@
+.todo-form {
+  display: flex;
+  gap: 12px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.todo-form input:focus {
+  outline: none;
+  border-color: #2563eb; /* Azul profissional */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.todo-form button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2563eb; /* Azul profissional */
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.todo-form button:hover {
+  background-color: #1d4ed8; /* Tom mais escuro do azul para hover */
+  transform: translateY(-1px);
+}
