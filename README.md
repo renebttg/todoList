@@ -1,20 +1,26 @@
-#  📝 To-Do List — API + Frontend Integrado
+# 📝 To-Do List — API + Frontend Integrado
 
-Este projeto é uma aplicação Full Stack de gerenciamento de tarefas (To-Do List) desenvolvida com Spring Boot 3 no backend e Angular no frontend.
-O frontend foi compilado e incorporado na pasta resources/static, permitindo que toda a aplicação seja executada a partir de um único artefato Java.
-O banco de dados utilizado é SQL (MySQL por padrão), podendo ser alterado via configuração.
+Este projeto é uma aplicação Full Stack de gerenciamento de tarefas (To-Do List) desenvolvida com **Spring Boot 3** no backend e **Angular** no frontend.
+
+O frontend foi compilado e incorporado na pasta `resources/static`, permitindo que toda a aplicação seja executada a partir de um único artefato Java. O banco de dados utilizado é SQL (MySQL por padrão), podendo ser alterado via configuração.
+
+> ℹ️ **Código-fonte do Frontend**
+> O código-fonte completo do Angular, utilizado para desenvolvimento e consulta, está disponível na branch separada: **[front-end](ttps://github.com/renebttg/todoList/tree/front-end)**.
+
+---
 
 ## 🚀 Tecnologias Utilizadas
 
-Backend: Java 21, Spring Boot 3 (Spring Web, Spring Data JPA, JPA/Hibernate), Maven
+-   **Backend**: Java 21, Spring Boot 3 (Spring Web, Spring Data JPA), Maven
+-   **Frontend**: Angular, TypeScript, HTML5, CSS3
+-   **Banco de Dados**: MySQL (padrão) — compatível com qualquer banco SQL suportado pelo Spring Data JPA
+-   **Build**: Maven + Angular CLI
 
-Frontend: Angular, TypeScript, HTML5, CSS3
-
-Banco de Dados: MySQL (padrão) — compatível com qualquer banco SQL suportado pelo Spring Data JPA
-
-Build: Maven + Angular CLI
+---
 
 ## 📂 Estrutura do Projeto
+
+A branch `main` está organizada para conter a API Spring e a versão de produção (compilada) do Angular.
 
 ```
 src/
@@ -32,11 +38,11 @@ src/
 
 ## ⚙️ Funcionalidades
 
-- Criar nova tarefa
-- Listar todas as tarefas
-- Marcar tarefa como concluída ou pendente
-- Editar tarefa existente
-- Excluir tarefa
+-   [x] Criar nova tarefa
+-   [x] Listar todas as tarefas
+-   [x] Marcar tarefa como concluída ou pendente
+-   [x] Editar tarefa existente
+-   [x] Excluir tarefa
 
 -----
 
@@ -51,41 +57,48 @@ src/
 | **DELETE** | `/task/{id}` | Remove uma tarefa               |
 
 ---
+
 ## ▶️ Como Executar
 
-### 1️⃣ Configurar Banco de Dados (MySQL)
+### 1. Pré-requisitos
 
-Crie um banco no MySQL:
+-   Java 21+
+-   Maven 3.8+
+-   MySQL Server (ou outro banco de dados SQL)
 
+### 2. Configurar o Banco de Dados
+
+**A) Crie um banco de dados no MySQL:**
 ```sql
 CREATE DATABASE todolist;
 ```
 
-
-No arquivo application.properties configure:
+**B) No arquivo src/main/resources/application.properties, configure as credenciais de acesso:**
 
 ```properties
+# MySQL Configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/todolist
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
+
+# Hibernate Configuration
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
-
 ------------
-## 2️⃣ Executar o Projeto
+## 3. Executar a Aplicação
+Você pode executar o projeto de duas maneiras:
 
-Via Maven
-
+**A) Via Maven:**
 ```bash
 mvn spring-boot:run
 ```
-
-
-Via JAR
-
+**B) Via JAR (recomendado para "produção"):**
 ```bash
+# 1. Empacote o projeto
 mvn clean package
+
+# 2. Execute o arquivo .jar gerado
 java -jar target/todo-list-0.0.1-SNAPSHOT.jar
 ```
 
