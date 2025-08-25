@@ -30,7 +30,6 @@ src/
  │   │   ├── static/           # Arquivos buildados do Angular
  │   │   ├── application.properties
  │   │   └── data.sql / schema.sql (opcional)
- frontend/                     # Código-fonte do Angular (não obrigatório no deploy)
  pom.xml
  ```
 
