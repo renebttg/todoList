@@ -40,8 +40,7 @@ src/
 
 -   [x] Criar nova tarefa
 -   [x] Listar todas as tarefas
--   [x] Marcar tarefa como concluída ou pendente
--   [x] Editar tarefa existente
+-   [x] Marcar tarefa como concluída
 -   [x] Excluir tarefa
 
 -----
